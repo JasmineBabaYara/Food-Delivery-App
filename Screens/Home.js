@@ -10,7 +10,6 @@ import {
   Dimensions,
 } from "react-native";
 import { Feather, FontAwesome } from "@expo/vector-icons";
-import Order from "./Order";
 
 //importing icons
 import nearby from "../assets/icons/nearby.png";
@@ -33,35 +32,36 @@ import avatar_2 from "../assets/images/avatar-2.jpg";
 import avatar_3 from "../assets/images/avatar-3.jpg";
 import avatar_4 from "../assets/images/avatar-4.jpg";
 import avatar_5 from "../assets/images/avatar-5.jpg";
-import special_crispy_burger from "../assets/images/special-crispy-burger.jpeg";
-import burger_restaurant_2 from "../assets/images/burger-restaurant-2.jpg";
+import assorted_noodles from "../assets/images/assorted-noodles.jpeg";
 import baked_fries from "../assets/images/baked-fries.jpg";
 import crispy_chicken_burger from "../assets/images/chicken-burger.jpeg";
-import chicago_hot_dog from "../assets/images/chicago-hot-dog.jpg";
-import fries_restaurant from "../assets/images/fries-restaurant.jpg";
-import hawaiian_pizza from "../assets/images/hawaiian-pizza.jpg";
+import chicken_noodles from "../assets/images/chicken-noodles.jpeg";
+import chicken_pizza from "../assets/images/chicken_pizza.jpeg";
+import cuisine from "../assets/images/cuisine.jpeg";
 import chicken_burger_honey from "../assets/images/chicken-burger-honey.jpeg";
-import hot_dog_restaurant from "../assets/images/hot-dog-restaurant.jpeg";
-import ice_kacang from "../assets/images/ice-kacang.jpg";
-import japanese_restaurant from "../assets/images/japanese-restaurant.jpg";
 import dessert from "../assets/images/Desserts.jpeg";
 import drinks from "../assets/images/drinks.jpeg";
-import kek_lapis from "../assets/images/kek-lapis.jpg";
-import kolo_mee from "../assets/images/kolo-mee.jpg";
-import nasi_briyani_mutton from "../assets/images/nasi-briyani-mutton.jpg";
-import nasi_lemak from "../assets/images/nasi-lemak.jpg";
-import noodle_shop from "../assets/images/noodle-shop.jpg";
-import spicy_noodles from "../assets/images/spicy-noodles.jpeg";
+import fufu from "../assets/images/fufu.jpeg";
+import hot_dog from "../assets/images/hotdog.jpeg";
+import hot_dog_restaurant from "../assets/images/hot-dog-restaurant.jpeg";
+import icecream from "../assets/images/icecream.webp";
+import japanese_restaurant from "../assets/images/japanese-restaurant.jpg";
+import juice from '../assets/images/juice.jpeg';
+import krushers from "../assets/images/krushers.jpeg";
+import kenkey from "../assets/images/kenkey.jpg";
+import pastries from "../assets/images/pastries.jpeg";
 import pizza_restaurant from "../assets/images/pizza-restaurant.jpeg";
-import pizza_img from "../assets/images/pizza.jpg";
+import pepperoni from "../assets/images/pepperoni.jpeg";
+import special_crispy_burger from "../assets/images/special-crispy-burger.jpeg";
 import salad_img from "../assets/images/salad.jpg";
-import sarawak_laksa from "../assets/images/sarawak-laksa.jpg";
 import sushi_img from "../assets/images/sushi.jpg";
 import shrimp_noodles from "../assets/images/shrimp-noodles.jpeg";
-import chicken_noodles from "../assets/images/chicken-noodles.jpeg";
-import assorted_noodles from "../assets/images/assorted-noodles.jpeg";
-import teh_c_peng from "../assets/images/teh-c-peng.jpg";
+import spicy_noodles from "../assets/images/spicy-noodles.jpeg";
+import soda from '../assets/images/soda.jpeg';
+import smoothies from "../assets/images/smoothies.webp";
 import tomato_pasta from "../assets/images/tomato-pasta.jpg";
+import tz from "../assets/images/tz.jpeg";
+import waakye from "../assets/images/waakye.jpeg";
 
 export default function Home({ navigation }) {
   // Dummy Datas
@@ -69,10 +69,10 @@ export default function Home({ navigation }) {
   const { width, height } = Dimensions.get("window");
 
   const initialCurrentLocation = {
-    streetName: "Kuching",
+    streetName: "East Legon",
     gps: {
-      latitude: 1.5496614931250685,
-      longitude: 110.36381866919922,
+      latitude:  5.714167 ,
+      longitude: -0.15418,
     },
   };
 
@@ -149,8 +149,8 @@ export default function Home({ navigation }) {
       photo: special_crispy_burger,
       duration: "30 - 45 min",
       location: {
-        latitude: 1.5347282806345879,
-        longitude: 110.35632207358996,
+        latitude: 5.5628957,
+        longitude: -0.177995,
       },
       courier: {
         avatar: avatar_1,
@@ -192,8 +192,8 @@ export default function Home({ navigation }) {
       photo: spicy_noodles,
       duration: "25 - 35 min",
       location: {
-        latitude: 1.5573478487252896,
-        longitude: 110.35568783282145,
+        latitude: 5.62042,
+        longitude: -0.177506,
       },
       courier: {
         avatar: avatar_1,
@@ -206,7 +206,7 @@ export default function Home({ navigation }) {
           photo: shrimp_noodles,
           description: "Sweet and Spicy noodles with shrimp",
           calories: 100,
-          price: 2,
+          price: 30,
         },
         {
           menuId: 5,
@@ -214,15 +214,15 @@ export default function Home({ navigation }) {
           photo: chicken_noodles,
           description: "Hot Noodles with chicken",
           calories: 100,
-          price: 3,
+          price: 20,
         },
         {
           menuId: 6,
           name: "Assorted Noodles",
           photo: assorted_noodles,
-          description: "Assorted Noodles",
+          description: "Noodles with chicken, susuage, eggs and vegetables",
           calories: 300,
-          price: 20,
+          price: 40,
         },
       ],
     },
@@ -235,8 +235,8 @@ export default function Home({ navigation }) {
       photo: pizza_restaurant,
       duration: "15 - 20 min",
       location: {
-        latitude: 1.556306570595712,
-        longitude: 110.35504616746915,
+        latitude: 5.6436124,
+        longitude: -0.1582533,
       },
       courier: {
         avatar: avatar_2,
@@ -245,18 +245,18 @@ export default function Home({ navigation }) {
       menu: [
         {
           menuId: 7,
-          name: "Hawaiian Pizza",
-          photo: hawaiian_pizza,
-          description: "Canadian bacon, homemade pizza crust, pizza sauce",
+          name: "Pepperoni Pizza",
+          photo: pepperoni,
+          description: "Pepperoni, pizza crust, sauce, mozzarella, cheese",
           calories: 250,
-          price: 15,
+          price: 20,
         },
         {
           menuId: 8,
-          name: "Tomato & Basil Pizza",
-          photo: pizza_img,
+          name: "Chicken Pizza",
+          photo: chicken_pizza,
           description:
-            "Fresh tomatoes, aromatic basil pesto and melted bocconcini",
+            "Fresh tomatoes, chicken breast, sauce and melted cheese",
           calories: 250,
           price: 20,
         },
@@ -287,8 +287,8 @@ export default function Home({ navigation }) {
       photo: hot_dog_restaurant,
       duration: "20 - 25 min",
       location: {
-        latitude: 1.5238753474714375,
-        longitude: 110.34261833833622,
+        latitude: 5.6436124,
+        longitude: -0.1582533,
       },
       courier: {
         avatar: avatar_3,
@@ -298,7 +298,7 @@ export default function Home({ navigation }) {
         {
           menuId: 11,
           name: "Chicago Style Hot Dog",
-          photo: chicago_hot_dog,
+          photo: hot_dog,
           description: "Fresh tomatoes, all beef hot dogs",
           calories: 100,
           price: 20,
@@ -314,8 +314,8 @@ export default function Home({ navigation }) {
       photo: japanese_restaurant,
       duration: "10 - 15 min",
       location: {
-        latitude: 1.5578068150528928,
-        longitude: 110.35482523764315,
+        latitude: 5.620171,
+        longitude: -0.1781939,
       },
       courier: {
         avatar: avatar_4,
@@ -338,11 +338,11 @@ export default function Home({ navigation }) {
       rating: 4.8,
       categories: [1, 2],
       priceRating: affordable,
-      photo: noodle_shop,
+      photo: cuisine,
       duration: "15 - 20 min",
       location: {
-        latitude: 1.558050496260768,
-        longitude: 110.34743759630511,
+        latitude: 5.64203721,
+        longitude: -0.16025639 ,
       },
       courier: {
         avatar: avatar_4,
@@ -351,35 +351,35 @@ export default function Home({ navigation }) {
       menu: [
         {
           menuId: 13,
-          name: "Kolo Mee",
-          photo: kolo_mee,
-          description: "Noodles with char siu",
+          name: "Fufu with Chicken Soup",
+          photo: fufu,
+          description: "Fufu with pepper chicken soup",
           calories: 200,
-          price: 5,
+          price: 15,
         },
         {
           menuId: 14,
-          name: "Sarawak Laksa",
-          photo: sarawak_laksa,
-          description: "Vermicelli noodles, cooked prawns",
+          name: "Tuo zaafi",
+          photo: tz,
+          description: "Cassava flour with varieties of meat",
           calories: 300,
-          price: 8,
+          price: 10,
         },
         {
           menuId: 15,
-          name: "Nasi Lemak",
-          photo: nasi_lemak,
-          description: "A traditional Malay rice dish",
+          name: "Kenkey with pepper and fish",
+          photo: kenkey,
+          description: "A staple dish with hot pepper, sliced onions and fresh tomatoes wth shrimp and fish",
           calories: 300,
-          price: 8,
+          price: 10,
         },
         {
           menuId: 16,
-          name: "Nasi Briyani with Mutton",
-          photo: nasi_briyani_mutton,
-          description: "A traditional Indian rice dish with mutton",
+          name: "Waakye",
+          photo: waakye,
+          description: "A traditional dish of cooked rice and beans.",
           calories: 300,
-          price: 8,
+          price: 10,
         },
       ],
     },
@@ -392,8 +392,8 @@ export default function Home({ navigation }) {
       photo: dessert,
       duration: "35 - 40 min",
       location: {
-        latitude: 1.5573478487252896,
-        longitude: 110.35568783282145,
+        latitude: 5.5697895,
+        longitude: -0.1685567,
       },
       courier: {
         avatar: avatar_1,
@@ -402,27 +402,27 @@ export default function Home({ navigation }) {
       menu: [
         {
           menuId: 17,
-          name: "Teh C Peng",
-          photo: teh_c_peng,
-          description: "Three Layer Teh C Peng",
+          name: "Ice cream",
+          photo: icecream,
+          description: "Multiple scoops of icecream with toppings",
           calories: 100,
           price: 2,
         },
         {
           menuId: 18,
-          name: "ABC Ice Kacang",
-          photo: ice_kacang,
-          description: "Shaved Ice with red beans",
+          name: "Pastries",
+          photo: pastries,
+          description: "Baked goodies",
           calories: 100,
           price: 3,
         },
         {
           menuId: 19,
-          name: "Kek Lapis",
-          photo: kek_lapis,
-          description: "Layer cakes",
+          name: "Krushers",
+          photo: krushers,
+          description: "Differbt flavoured smoothies with crushed biscuits",
           calories: 300,
-          price: 20,
+          price: 2,
         },
       ],
     },
@@ -435,8 +435,8 @@ export default function Home({ navigation }) {
       photo: drinks,
       duration: "5 - 15 min",
       location: {
-        latitude: 1.5573478487252896,
-        longitude: 110.35568783282145,
+        latitude: 5.5697895,
+        longitude: -0.1685567,
       },
       courier: {
         avatar: avatar_1,
@@ -445,25 +445,25 @@ export default function Home({ navigation }) {
       menu: [
         {
           menuId: 20,
-          name: "Teh C Peng",
-          photo: teh_c_peng,
-          description: "Three Layer Teh C Peng",
+          name: "Fruit Juice",
+          photo: juice,
+          description: "Varieties of healthy fruit juice ",
           calories: 100,
           price: 2,
         },
         {
           menuId: 21,
-          name: "ABC Ice Kacang",
-          photo: ice_kacang,
-          description: "Shaved Ice with red beans",
+          name: "Carbonated drinks",
+          photo: soda,
+          description: "carbonated drinks",
           calories: 100,
           price: 3,
         },
         {
           menuId: 22,
-          name: "Kek Lapis",
-          photo: kek_lapis,
-          description: "Layer cakes",
+          name: "Smoothies",
+          photo: smoothies,
+          description: "Beverage made by puréeing ingredients",
           calories: 300,
           price: 20,
         },

@@ -7,34 +7,27 @@ import {
   StyleSheet,
   SafeAreaView,
 } from "react-native";
-import welcome from "../assets/img/w.jpeg";
+import welcome from "../assets/images/welcome.jpeg";
 import { Ionicons } from "@expo/vector-icons";
-import { LinearGradient } from "expo-linear-gradient";
 
 export default function Welcome({ navigation }) {
   return (
     <View style={styles.welcomecontainer}>
       <ImageBackground source={welcome} style={styles.image}>
         <View style={styles.header}>
-          <Ionicons name="fast-food-outline" size={24} color="#fff" />
+          <Ionicons name="fast-food-outline" size={30} color="#fff" />
           <Text style={styles.headertxt}>JBY FOODS</Text>
         </View>
         <View style={styles.bottom}>
-          <Text style={styles.bottomtxt}>Enjoy delicious meals right now.</Text>
-          <TouchableOpacity style={styles.btn}>
-            <Text
-              onPress={() => navigation.navigate("Home")}
-              style={styles.btntxt}
-            >
-              Sign in
-            </Text>
+          <Text style={styles.bottomtxt}>
+            Enjoy delicious meals with just a click of a button.{" "}
+          </Text>
+          <TouchableOpacity
+            style={styles.btn}
+            onPress={() => navigation.navigate("Home")}
+          >
+            <Text style={styles.btntxt}>Get Started</Text>
           </TouchableOpacity>
-          <View style={styles.signup}>
-            <Text style={styles.signuptxt}>Don't have an account?</Text>
-            <TouchableOpacity>
-              <Text style={styles.sign}>Sign up.</Text>
-            </TouchableOpacity>
-          </View>
         </View>
       </ImageBackground>
     </View>
@@ -54,16 +47,15 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     padding: 2,
-    marginTop: 50,
+    marginTop: 60,
   },
 
   headertxt: {
-    fontSize: 19,
-    fontFamily: "serif",
+    fontSize: 25,
     fontStyle: "italic",
-    fontWeight: "700",
     marginLeft: 10,
     color: "#fff",
+    fontWeight: "bold",
   },
 
   image: {
@@ -82,13 +74,14 @@ const styles = StyleSheet.create({
     fontSize: 40,
     fontWeight: "700",
     marginLeft: 20,
-    width: "80%",
+    width: "75%",
+    letterSpacing: 2,
   },
 
   btn: {
-    backgroundColor: "orange",
-    marginTop: 55,
-    padding: 8,
+    backgroundColor: "darkorange",
+    marginTop: "30%",
+    padding: 20,
     borderRadius: 10,
     alignItems: "center",
     width: "80%",
@@ -97,25 +90,7 @@ const styles = StyleSheet.create({
 
   btntxt: {
     color: "#fff",
-    fontSize: 16,
-  },
-
-  signup: {
-    display: "flex",
-    flexDirection: "row",
-    marginTop: 5,
-    justifyContent: "center",
-  },
-
-  signuptxt: {
-    color: "#fff",
-    fontSize: 15,
-  },
-
-  sign: {
-    color: "#fff",
-    fontSize: 15,
-    marginLeft: 5,
-    textDecorationLine: "underline",
+    fontSize: 20,
+    fontWeight: "bold",
   },
 });
