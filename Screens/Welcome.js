@@ -15,7 +15,7 @@ export default function Welcome({ navigation }) {
     <View style={styles.welcomecontainer}>
       <ImageBackground source={welcome} style={styles.image}>
         <View style={styles.header}>
-          <Ionicons name="fast-food-outline" size={30} color="#fff" />
+          <Ionicons name="fast-food-outline" size={36} color="#fff" />
           <Text style={styles.headertxt}>JBY FOODS</Text>
         </View>
         <View style={styles.bottom}>
@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
   },
 
   headertxt: {
-    fontSize: 25,
+    fontSize: 30,
     fontStyle: "italic",
     marginLeft: 10,
     color: "#fff",
