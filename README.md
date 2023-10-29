@@ -18,7 +18,7 @@ expo start
 Choose either android, ios or a web simulator to open the project.
 
 ## Usage
-To use the application, simply upload a resume in either PDF or Word format and the application will extract useful information such as contact information and work experience. With this information, you can quickly and easily identify the best candidates for your open positions.
+To use the application, simply turn on your desired simulator, click on get started and navigate your way through the specific screens. 
 
 ## Built With
 - React Native 
